@@ -1,0 +1,222 @@
+/*Allmän styling*/
+* {
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/*Allmän styling*/
+body {
+    background-color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: white;
+}
+
+/*begränsar vidd på main*/
+main {
+    width: 700px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Centrerar rubriker*/
+h1,
+h2 {
+    text-align: center;
+}
+
+/*Styling till rubriker i cv-inläggen*/
+h3 {
+    text-decoration: underline;
+}
+
+#icon {
+    width: 80px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+/*"tar bort" styling vid besökta länkar i navigeringen*/
+nav a:visited {
+    color: white;
+}
+
+/*nav hover*/
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/*menu ul*/
+nav ul{
+    padding-left: 0;
+
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+}
+
+
+/*centreringsdiv till meny-knapparna*/
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 342px;
+    max-width: 100%;
+}
+
+/*för menyknappar för att visa aktiv sida*/
+.underlined {
+    text-decoration: underline;
+}
+
+/*Styling av knappar*/
+button {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 1.1em;
+    box-shadow: 3px 3px 3px 2px rgb(0, 0, 0, 0.2);
+    margin-left: 5px;
+    margin-right: 5px;
+    /*För att knapptext ska visas korrekt i safari på iphone*/
+    -webkit-text-fill-color: black;
+    margin-top: 10px;
+    display: block;
+}
+
+/*Hover effekt till knappar*/
+button:hover {
+    background-color: rgb(17, 141, 57);
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
+}
+
+/*Styling av delete-knapp för cv-inlägg*/
+.remove-cv:hover{
+    background-color: rgb(199, 58, 58);
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
+}
+
+/*Meny-knappar*/
+.btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    color: white;
+}
+
+#login-btn, #logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#logout-btn {
+    display: none;
+}
+
+/*Meny-knappar*/
+.btn:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+/*Styling av linje under menyn*/
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin-top: 10px;
+}
+
+/*responsivt formulär*/
+form {
+    width: 300px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+/*textarea i formuläret*/
+#description {
+    width: 500px;
+    max-width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+/*centrering submit-knapp*/
+#submit {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*styling av div till cv-inläggen*/
+.cv-post {
+    background-color: rgb(145, 123, 68);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: white;
+    max-width: 700px;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*hover effekt av div till cv-inläggen*/
+.cv-post:hover {
+    background-color: rgb(142, 111, 36);
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
+}
+
+/*textstyling för att visa notiser på sidorna*/
+#alert {
+    color: rgb(255, 80, 80);
+}
+
+/*textstyling för att visa notiser på sidorna*/
+#alert2 {
+    color: rgb(50, 255, 50);
+}
+
+/*Media querie för extra små skärmar*/
+@media screen and (max-width: 300px) {
+
+    /*centreringsdiv till meny-knapparna*/
+    .center {
+        width: 250px;
+    }
+    
+    /*Meny-knappar*/
+    .btn {
+        padding: 5px;
+    }
+    }
+
+    /*Media querie för extra små skärmar*/
+@media screen and (min-width: 300px) and (max-width: 355px) {
+
+    /*centreringsdiv till meny-knapparna*/
+    .center {
+        width: 280px;
+    }
+
+    /*Meny-knappar*/
+    .btn {
+        padding: 10px;
+    }
+}

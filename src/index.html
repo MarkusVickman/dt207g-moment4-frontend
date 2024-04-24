@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personligt CV | Startsida</title>
+    <!--Länk till script-fil-->
+
+    <!--Länk till css-fil-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--Länk till google-fonts typsnitt-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+</head>
+
+<body>
+    <header>
+        <img src="cv.png" id="icon">
+        <h1>Ditt CV</h1>
+        <button href="" id="login-btn">Logga in</button>
+        <button href="index.html" id="logout-btn">Logga ut</button>
+        <!--Centrerar kategorivalen-->
+        <nav class="center">
+            <ul>
+                <li><a href="index.html" class="underlined" class="btn">Ditt CV</a></li>
+                <li><a href="my_pages.html" class="btn">Min sida</a></li>
+                <li><a href="user.html" class="btn">Användare</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Huvudsidan med en todo-lista-->
+    <main id="main">
+
+        <!--Linje för stil-->
+        <div id="line"></div>
+        <!--För att skriva ut todo som är aktiva-->
+        <article>
+            <h2>Ditt CV</h2>
+            <p>Vänligen vänta, det kan ta en liten stund innan du ser cv-inläggen nedan.</p>
+            <div id="cv-div"></div>
+            <!--Meddelande för när formuläret oven fyllts i-->
+            <p id="alert"></p>
+            <p id="alert2"></p>
+        </article>
+    </main>
+</body>
+
+</html>
