@@ -63,10 +63,17 @@ nav li{
 
 
 /*centreringsdiv till meny-knapparna*/
-.center {
+.center1 {
     margin-left: auto;
     margin-right: auto;
-    width: 342px;
+    width: 250px;
+    max-width: 100%;
+}
+
+.center2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
     max-width: 100%;
 }
 
@@ -76,7 +83,7 @@ nav li{
 }
 
 /*Styling av knappar*/
-button {
+button, #login-btn, #logout-btn {
     background-color: rgb(255, 255, 255);
     padding: 5px;
     border-radius: 10px;
@@ -92,14 +99,14 @@ button {
 }
 
 /*Hover effekt till knappar*/
-button:hover {
-    background-color: rgb(17, 141, 57);
+button:hover, #login-btn:hover {
+    background-color: rgb(124, 197, 147);
     box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
 }
 
 /*Styling av delete-knapp för cv-inlägg*/
-.remove-cv:hover{
-    background-color: rgb(199, 58, 58);
+.remove-cv:hover, #logout-btn :hover {
+    background-color: rgb(207, 77, 77);
     box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
 }
 
@@ -126,7 +133,7 @@ button:hover {
 
 /*Meny-knappar*/
 .btn:hover {
-    background-color: black;
+    background-color: rgb(85, 85, 85);
     cursor: pointer;
 }
 
@@ -191,6 +198,13 @@ form {
 /*textstyling för att visa notiser på sidorna*/
 #alert2 {
     color: rgb(50, 255, 50);
+}
+
+#breadcrumbs {
+    font-size: 0.8em;
+    color: white;
+    position: absolute;
+    left: 20px;    
 }
 
 /*Media querie för extra små skärmar*/

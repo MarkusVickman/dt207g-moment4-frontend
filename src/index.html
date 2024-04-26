@@ -12,7 +12,8 @@
     <!--Länk till google-fonts typsnitt-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -20,28 +21,27 @@
 
 <body>
     <header>
-        <img src="cv.png" id="icon">
-        <h1>Ditt CV</h1>
-        <button href="" id="login-btn">Logga in</button>
-        <button href="index.html" id="logout-btn">Logga ut</button>
+        <a href="index.html"><img src="cv.png" id="icon"></a>
+        <h1>Personligt CV</h1>
+        <a href="login.html" type="button" id="login-btn">Logga in</a>
+        <a href="index.html" type="button" id="logout-btn">Logga ut</a>
         <!--Centrerar kategorivalen-->
-        <nav class="center">
+        <nav class="center1">
             <ul>
-                <li><a href="index.html" class="underlined" class="btn">Ditt CV</a></li>
-                <li><a href="my_pages.html" class="btn">Min sida</a></li>
-                <li><a href="user.html" class="btn">Användare</a></li>
+                <li><a href="index.html" class="underlined btn" class="btn">Startsida</a></li>
+                <li><a href="my_cv.html" class="btn">Mina sidor</a></li>
             </ul>
         </nav>
     </header>
     <!--Huvudsidan med en todo-lista-->
     <main id="main">
-
         <!--Linje för stil-->
-        <div id="line"></div>
+        <div class="line"></div>
         <!--För att skriva ut todo som är aktiva-->
         <article>
-            <h2>Ditt CV</h2>
-            <p>Vänligen vänta, det kan ta en liten stund innan du ser cv-inläggen nedan.</p>
+            <h2>Startsida</h2>
+            <p>Här på Personligt CV kan du med hjälp av inloggning skapa privata CV-inlägg som endast du kan se.
+            </p>
             <div id="cv-div"></div>
             <!--Meddelande för när formuläret oven fyllts i-->
             <p id="alert"></p>

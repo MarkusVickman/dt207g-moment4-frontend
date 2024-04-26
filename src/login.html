@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personligt CV | Användare</title>
+    <title>Personligt CV | Logga in</title>
     <!--Länk till script-fil-->
 
     <!--Länk till css-fil-->
@@ -21,30 +21,33 @@
 <body>
     <header>
         <a href="index.html"><img src="cv.png" id="icon"></a>
-        <h1>Mina sidor</h1>
-        <button href="index.html" id="logout-btn">Logga ut</button>
+        <h1>Personligt CV</h1>
         <!--Centrerar kategorivalen-->
-        <nav class="center2">
+        <nav class="center1">
             <ul>
-                <li><a href="my_cv.html" class="btn">Mitt CV</a></li>
-                <li><a href="" class="underlined btn">Min användare</a></li>
+                <li><a href="login.html" class="btn underlined">Logga in</a></li>
+                <li><a href="register.html" class="btn">Registrera</a></li>
             </ul>
         </nav>
     </header>
     <!--Huvudsidan med en todo-lista-->
     <main id="main">
-        <div id="breadcrumbs"><a href="index.html">Startsidan</a> -> Mina sidor -> Min Användare<p></div>
+        <div id="breadcrumbs"><a href="index.html">Startsidan</a> -> Logga in<p></div>
         <!--Linje för stil-->
         <div class="line"></div>
         <!--För att skriva ut todo som är aktiva-->
         <article>
-            <h2>Min användare</h2>
-            <p>Vänligen vänta, det kan ta en liten stund innan du ser cv-inläggen nedan.</p>
-            <div id="cv-div"></div>
-            <!--Meddelande för när formuläret oven fyllts i-->
-            <p id="alert"></p>
-            <p id="alert2"></p>
+            <h2>Logga in på mina sidor</h2>
+            <form id="form">
+                <label for="user_name">Användarnamn:</label><br>
+                <input type="text" id="user_name">
+                <br>
+                <label for="password">Lösenord:</label><br>
+                <input type="password" id="password">
+                <button id="submit" type="submit">Spara</button>
+            </form>
         </article>
     </main>
 </body>
+
 </html>

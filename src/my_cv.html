@@ -24,17 +24,20 @@
 
 <body>
     <header>
-        <h1>CV-listan</h1>
+        <a href="index.html"><img src="cv.png" id="icon"></a>
+        <h1>Mina sidor</h1>
+        <button href="index.html" id="logout-btn">Logga ut</button>
         <!--Centrerar kategorivalen-->
-        <nav class="center">
+        <nav class="center2">
             <ul>
-                <li><a href="index.html" id="cv-btn">Ditt CV</a></li>
-                <li><a href="my_pages.html" class="underlined" id="add-btn">Min sida</a></li>
+                <li><a href="" class="underlined btn" id="add-btn">Mitt CV</a></li>         
+                <li><a href="user.html" class="btn">Min användare</a></li>
             </ul>
         </nav>
     </header>
     <!--Huvudsidan med ett formulär-->
     <main id="main">
+        <div id="breadcrumbs"><a href="index.html">Startsidan</a> -> Mina sidor -> Mitt CV<p></div>
         <!--Linje för stil-->
         <div class="line"></div>
         <!--Formulär för CV-->
@@ -67,8 +70,7 @@
         <p id="alert2"></p>
         <!--För att skriva ut todo som är aktiva-->
         <article>
-            <h2>Ditt CV</h2>
-            <p>Vänligen vänta, det kan ta en liten stund innan du ser cv-inläggen nedan.</p>
+            <h2>Mitt CV</h2>
             <div id="cv-div"></div>
         </article>
     </main>
