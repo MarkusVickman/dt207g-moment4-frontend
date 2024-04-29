@@ -6,9 +6,13 @@ const alert2 = document.getElementById("alert2");
 
 //Get fetch-anrop för att hämta array med cv
 export async function apiGet() {
-      const url = 'https://dt207g-moment3.azurewebsites.net/api/cv';
       try {
-            const response = await fetch(url);
+            const response = await fetch('https://dt207g-moment4.azurewebsites.net/api/protected/cv', {
+                  method: 'GET',
+                  headers: {
+                        'authorization': 'Bearer ' + sessionStorage.getItem("token")
+                  }
+            })
             const result = await response.json();
             //returnerar json-data till funktionen writeCvToHtml()
             alert.innerHTML = "";
@@ -21,7 +25,7 @@ export async function apiGet() {
 
 //Post fetch-anrop som tar in ett objekt som parameter
 export async function apiPost(cv) {
-      let response = await fetch('https://dt207g-moment3.azurewebsites.net/api/add', {
+      let response = await fetch('https://dt207g-moment4.azurewebsites.net/api/protected/add', {
             method: 'POST',
             headers: {
                   'Content-Type': 'application/json'
@@ -35,7 +39,7 @@ export async function apiPost(cv) {
 
 //Delete fetch-anrop som tar in ett id/index som skickas med till servern för att tas bort från databasen 
 export async function apiDelete(id) {
-      let response = await fetch(`https://dt207g-moment3.azurewebsites.net/api/delete/${id}`, {
+      let response = await fetch(`https://dt207g-moment4.azurewebsites.net/api/protected/delete/${id}`, {
             method: 'DELETE',
             headers: {
                   'Content-Type': 'application/json'
@@ -43,6 +47,6 @@ export async function apiDelete(id) {
             body: JSON.stringify()
       });
       //Väntar på data och först när den finns görs en retur till funktionen removeCV(id) där den väntar på svar
-      let data = await response.json(); 
+      let data = await response.json();
       return data;
 }

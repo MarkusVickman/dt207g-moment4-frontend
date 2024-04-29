@@ -14,9 +14,12 @@ function checkLoggedInStatus(){
         login.style.display = "none";
         logout.style.display = "block";
     }
+
+    console.log(sessionStorage.getItem("token"));
 };
 
 document.addEventListener("DOMContentLoaded", (e) => {
+
     login.addEventListener("click", (e) => {
         window.location.href = "login.html";
     });

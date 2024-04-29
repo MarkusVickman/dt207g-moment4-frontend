@@ -1,4 +1,4 @@
-
+/*
 window.onload = init;
 
 async function init() {
@@ -25,3 +25,4 @@ async function init() {
     });
 
 };
+*/
