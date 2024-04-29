@@ -61,6 +61,10 @@ nav li{
     display: inline-block;
 }
 
+a {
+    color: lightyellow;
+}
+
 
 /*centreringsdiv till meny-knapparna*/
 .center1 {

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personligt CV | Mina sidor</title>
     <!--Länk till script-fil-->
+    <script src="js/start.js" type="module"></script>
     <script src="js/api.js" type="module"></script>
     <script src="js/form.js" type="module"></script>
     <script src="js/cv-list.js" type="module"></script>
-    <script src="js/delete.js" type="module"></script>   
+    <script src="js/delete.js" type="module"></script>
+    <script src="js/verify.js" type="module"></script>
     <!--Länk till css-fil-->
     <link rel="stylesheet" href="css/main.css">
     <!--Länk till google-fonts typsnitt-->
@@ -26,18 +28,21 @@
     <header>
         <a href="index.html"><img src="cv.png" id="icon"></a>
         <h1>Mina sidor</h1>
+        <a href="login.html" type="button" id="login-btn">Logga in</a>
+        <a href="index.html" type="button" id="logout-btn">Logga ut</a>
         <button href="index.html" id="logout-btn">Logga ut</button>
         <!--Centrerar kategorivalen-->
         <nav class="center2">
             <ul>
-                <li><a href="" class="underlined btn" id="add-btn">Mitt CV</a></li>         
+                <li><a href="" class="underlined btn" id="add-btn">Mitt CV</a></li>
                 <li><a href="user.html" class="btn">Min användare</a></li>
             </ul>
         </nav>
     </header>
     <!--Huvudsidan med ett formulär-->
     <main id="main">
-        <div id="breadcrumbs"><a href="index.html">Startsidan</a> -> Mina sidor -> Mitt CV<p></div>
+        <div id="breadcrumbs"><a href="index.html">Startsidan</a> -> Mina sidor -> Mitt CV<p>
+        </div>
         <!--Linje för stil-->
         <div class="line"></div>
         <!--Formulär för CV-->

@@ -12,10 +12,13 @@
     <!--Länk till google-fonts typsnitt-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <!--Länk till script-fil-->
+    <script src="js/login.js" type="module"></script>
 </head>
 
 <body>
@@ -32,7 +35,8 @@
     </header>
     <!--Huvudsidan med en todo-lista-->
     <main id="main">
-        <div id="breadcrumbs"><a href="index.html">Startsidan</a> -> Logga in<p></div>
+        <div id="breadcrumbs"><a href="index.html">Startsidan</a> -> Logga in<p>
+        </div>
         <!--Linje för stil-->
         <div class="line"></div>
         <!--För att skriva ut todo som är aktiva-->
@@ -44,8 +48,9 @@
                 <br>
                 <label for="password">Lösenord:</label><br>
                 <input type="password" id="password">
-                <button id="submit" type="submit">Spara</button>
+                <button id="submit" title="login" type="submit">Spara</button>
             </form>
+            <p id="alert1"></p>
         </article>
     </main>
 </body>

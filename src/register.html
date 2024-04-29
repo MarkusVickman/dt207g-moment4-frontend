@@ -16,6 +16,8 @@
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+        <!--Länk till script-fil-->
+        <script src="js/login.js" type="module"></script>
 </head>
 
 <body>
@@ -44,8 +46,9 @@
                 <br>
                 <label for="password">Lösenord:</label><br>
                 <input type="password" id="password">
-                <button id="submit" type="submit">Spara</button>
+                <button id="submit" title="register" type="submit">Spara</button>
             </form>
+            <p id="alert1"></p>
         </article>
     </main>
 </body>
