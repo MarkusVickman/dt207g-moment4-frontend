@@ -1,5 +1,7 @@
 //Fil med fetch-anrop
 
+import { writeCvToHtml } from './cv-list.js';
+
 //Läser in variabel med ett element där meddelanden ska visas
 const alert = document.getElementById("alert");
 const alert2 = document.getElementById("alert2");
@@ -28,6 +30,7 @@ export async function apiPost(cv) {
       let response = await fetch('https://dt207g-moment4.azurewebsites.net/api/protected/add', {
             method: 'POST',
             headers: {
+                  'authorization': 'Bearer ' + sessionStorage.getItem("token"),
                   'Content-Type': 'application/json'
             },
             body: JSON.stringify(cv)
@@ -35,6 +38,7 @@ export async function apiPost(cv) {
       let data = await response.json();
       //När det är klart skrivs ett meddelande ut på skärmen att inlägget är sparat
       alert2.innerHTML = "Ditt inlägg är nu lagrat i databasen och går att se på startsidan.";
+      writeCvToHtml();
 }
 
 //Delete fetch-anrop som tar in ett id/index som skickas med till servern för att tas bort från databasen 
@@ -42,6 +46,7 @@ export async function apiDelete(id) {
       let response = await fetch(`https://dt207g-moment4.azurewebsites.net/api/protected/delete/${id}`, {
             method: 'DELETE',
             headers: {
+                  'authorization': 'Bearer ' + sessionStorage.getItem("token"),
                   'Content-Type': 'application/json'
             },
             body: JSON.stringify()
@@ -50,3 +55,5 @@ export async function apiDelete(id) {
       let data = await response.json();
       return data;
 }
+
+

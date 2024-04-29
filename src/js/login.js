@@ -16,7 +16,7 @@ fetch('https://dt207g-moment4.azurewebsites.net/api/login', {
 })
     .then(data => {
         sessionStorage.setItem('token', data.token);
-        window.location.href = "my_cv.html";
+        window.location.href = "cv.html";
     })
     .catch(error => {
         alertMessage.innerHTML = 'Fel vid inloggning: ' + error.message;
