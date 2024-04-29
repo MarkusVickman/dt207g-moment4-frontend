@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     if (!sessionStorage.getItem("token")) {
         window.location.href = "login.html";
     } else {
-        window.location.href = "my_cv.html";
+        window.location.href = "cv.html";
     }
 });
 });
