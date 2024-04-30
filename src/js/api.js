@@ -37,7 +37,7 @@ export async function apiPost(cv) {
       });
       let data = await response.json();
       //När det är klart skrivs ett meddelande ut på skärmen att inlägget är sparat
-      alert2.innerHTML = "Ditt inlägg är nu lagrat i databasen och går att se på startsidan.";
+      alert2.innerHTML = "Ditt inlägg är nu lagrat i databasen.";
       writeCvToHtml();
 }
 

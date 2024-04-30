@@ -72,14 +72,39 @@ async function writeUserToHtml() {
     
         let newDiv = document.createElement("div");
         newDiv.classList.add(`cv-post`);
-        newDiv.innerHTML = `
+        /*newDiv.innerHTML = `
                     <h3>${user.username.charAt(0).toUpperCase()
                         + user.username.slice(1)}</h3>
                     <p><strong>Skapad:</strong> ${user.created.slice(0, 10)}</p>
                     <p>Varning! Om du tar bort användaren försvinner alla dina skapade cv och går inte att återkalla.</p>
                     <button id="remove" class="remove-user">Ta bort</button>
                     `;
-        userDiv.appendChild(newDiv);
-    
+        userDiv.appendChild(newDiv);*/
 
+
+        let h3 = document.createElement("h3");
+        let h3Text = document.createTextNode(user.username.charAt(0).toUpperCase()
+        + user.username.slice(1));
+        h3.appendChild(h3Text);
+
+        let p1 = document.createElement("p");
+        let p1Text = document.createTextNode(user.created.slice(0, 10));
+        p1.style.fontWeight = "strong";
+        p1.appendChild(p1Text);
+
+        let p2 = document.createElement("p");
+        let p2Text = document.createTextNode("Varning! Om du tar bort användaren försvinner alla dina skapade cv och går inte att återkalla.");
+        p2.appendChild(p2Text);
+
+        let button = document.createElement("button");
+        let buttonText = document.createTextNode("Ta bort");
+        button.appendChild(buttonText);
+        button.id = "remove";
+        button.classList.add("remove-user");
+
+        newDiv.appendChild(h3);
+        newDiv.appendChild(p1);
+        newDiv.appendChild(p2);
+        newDiv.appendChild(button);
+        userDiv.appendChild(newDiv);
 };
