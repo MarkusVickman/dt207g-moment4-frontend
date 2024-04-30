@@ -1,11 +1,11 @@
 
-
-
 let login = document.getElementById("login-btn");
 let logout = document.getElementById("logout-btn");
 
 window.onload = checkLoggedInStatus();
 
+
+//Används på startsidan för att ändra stil om användaren är inloggad.
 function checkLoggedInStatus(){
     if (!sessionStorage.getItem("token")) {
         logout.style.display = "none";
@@ -14,10 +14,9 @@ function checkLoggedInStatus(){
         login.style.display = "none";
         logout.style.display = "block";
     }
-
-    console.log(sessionStorage.getItem("token"));
 };
 
+//Eventlistener för logga in och logga ut-knapparna. SessionStorage token tas bort vid utloggning
 document.addEventListener("DOMContentLoaded", (e) => {
 
     login.addEventListener("click", (e) => {
@@ -27,6 +26,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
     logout.addEventListener("click", (e) => {
         window.location.href = "index.html";
         sessionStorage.removeItem("token");
-    });
-    
+    });  
 });

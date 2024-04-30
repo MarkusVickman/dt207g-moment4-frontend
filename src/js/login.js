@@ -1,5 +1,8 @@
+//JS-fil med funktion för att samla in inloggnings/registreringsdata från formulär och skicka vidare till rätt api
+
 let alertMessage = document.getElementById("alert1");
 
+//Funktion för att logga in på sidan och spara en JWT-token i sessionstorage för authentizering
 function apiLogin (login){
 fetch('https://dt207g-moment4.azurewebsites.net/api/login', {
     method: 'POST',
@@ -23,7 +26,7 @@ fetch('https://dt207g-moment4.azurewebsites.net/api/login', {
 });
 };
 
-
+//Funktion för att registrera en användare i databasen som sedan går att logga in till.
 function apiRegister (login){
     fetch('https://dt207g-moment4.azurewebsites.net/api/register', {
         method: 'POST',
@@ -46,29 +49,27 @@ function apiRegister (login){
     });
     };
     
-
-
-
-
 document.addEventListener("DOMContentLoaded", (event) => {
     // Lägg till händelselyssnare på formuläret
     form.addEventListener("submit", (e) => {
         let submit = document.getElementById("submit");
         e.preventDefault();
-        // Hämta användarnamn och lösenord från formuläret
-        let userName = document.getElementById("user_name").value;
+        // Hämta användarnamn i lowerCase och lösenord från formuläret
+        let userName = document.getElementById("user_name").value.toLowerCase();
         let password = document.getElementById("password").value;
 
         //Letar fel i formuläret med errorCheck funktionen. Utan fel så skapas ett object som skickas till funktionen för POST-anrop
         if (errorCheck(userName, password)) {
             alertMessage.innerHTML = "";
             const login = { username: userName, password: password };
+
+            //Utifrån sumbit-knappens titel väljs om en registrering eller inloggning ska göras. Ett object skickas med inloggningsinformation
             if(submit.title === "login"){          
             apiLogin(login);
             } else if(submit.title === "register"){
                 apiRegister(login);
             }
-            //Resetar formuläret om det är korrekt ifyllt
+            //Resettar formuläret om det är korrekt ifyllt
             document.getElementById("user_name").value = "";
             document.getElementById("password").value = "";
         }

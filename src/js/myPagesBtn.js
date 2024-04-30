@@ -1,4 +1,4 @@
-
+//Används enbart för att dirigera användaren när mina sidor-knappen används i menyn. Om man inte är inloggad skickas användaren till inloggningssidan.
 
 let myPages = document.getElementById("my-pages-btn");
 

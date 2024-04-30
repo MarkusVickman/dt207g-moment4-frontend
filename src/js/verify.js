@@ -1,3 +1,4 @@
+//Används för att verifiera att användaren är den som den utger sig för och att det är rätt token.
 
 window.onload = init;
 

@@ -19,5 +19,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
 async function removeCV(id) {
     let data = await apiDelete(id);
     writeCvToHtml();
-    alert2.innerHTML = `Inlägg ${id} är borttaget från databasen.`;
+    alert2.innerHTML = `Ett CV-inlägg är borttaget från databasen.`;
 }

@@ -1,4 +1,4 @@
-//Fil med fetch-anrop
+//Fil med fetch-anrop för att hämta personliga cv. Bearer token för säkerhet skickas med och krävs av servern för alla anrop till apit.
 
 import { writeCvToHtml } from './cv-list.js';
 
@@ -6,7 +6,7 @@ import { writeCvToHtml } from './cv-list.js';
 const alert = document.getElementById("alert");
 const alert2 = document.getElementById("alert2");
 
-//Get fetch-anrop för att hämta array med cv
+//Get fetch-anrop för att hämta array med cv.
 export async function apiGet() {
       try {
             const response = await fetch('https://dt207g-moment4.azurewebsites.net/api/protected/cv', {

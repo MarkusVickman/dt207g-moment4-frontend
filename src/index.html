@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personligt CV | Startsida</title>
     <!--Länk till script-fil-->
-    <script src="js/start.js" type="module"></script>
     <script src="js/myPagesBtn.js" type="module"></script>
+    <script src="js/start.js" type="module"></script>
     <!--Länk till css-fil-->
     <link rel="stylesheet" href="css/main.css">
     <!--Länk till google-fonts typsnitt-->
@@ -22,31 +22,29 @@
 
 <body>
     <header>
-        <a href="index.html"><img src="cv.png" id="icon"></a>
+        <a href="index.html"><img src="cv.png" id="icon" alt="ikon av ett diplom"></a>
         <h1>Personligt CV</h1>
-        <a href="login.html" type="button" id="login-btn">Logga in</a>
-        <a href="index.html" type="button" id="logout-btn">Logga ut</a>
+        <a href="login.html" id="login-btn">Logga in</a>
+        <a href="index.html" id="logout-btn">Logga ut</a>
         <!--Centrerar kategorivalen-->
         <nav class="center1">
             <ul>
                 <li><a href="index.html" class="underlined btn">Startsida</a></li>
-                <li><a href="cv.html" class="btn" id="my-pages-btn">Mina sidor</a></li>
+                <li><a class="btn" id="my-pages-btn">Mina sidor</a></li>
             </ul>
         </nav>
     </header>
-    <!--Huvudsidan med en todo-lista-->
+    <!--Main startsidan-->
     <main id="main">
         <!--Linje för stil-->
         <div class="line"></div>
-        <!--För att skriva ut todo som är aktiva-->
+        <!--För att skriva ut cv som är aktiva-->
         <article>
             <h2>Startsida</h2>
-            <p>Här på Personligt CV kan du med hjälp av inloggning skapa privata CV-inlägg som endast du kan se.
+            <p>Här på Personligt CV kan du med hjälp av inloggning skapa privata CV-inlägg som endast du kan se. Det går
+                även lätt att ta bort inlägg eller
+                profil om så önskas.
             </p>
-            <div id="cv-div"></div>
-            <!--Meddelande för när formuläret oven fyllts i-->
-            <p id="alert"></p>
-            <p id="alert2"></p>
         </article>
     </main>
 </body>

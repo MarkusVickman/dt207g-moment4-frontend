@@ -4,7 +4,7 @@ const alertMessage = document.getElementById("alert");
 const userDiv = document.getElementById("user-div");
 
 document.addEventListener("DOMContentLoaded", (e) => {
-    //Eventlistener som lyssnar efter klick på ta bort knapparna för cv, initierar funktionen removeCV och skickar med id/index som argument
+    //Eventlistener som lyssnar efter klick på ta bort knappen för en användare, initierar funktionen userDelete() och skickar med id/index som argument
     userDiv.addEventListener("click", (e) => {
         if (e.target.classList.contains("remove-user")) {
             userDelete();
@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     });
 });
 
-
-//Get fetch-anrop för att hämta array med cv
+//Get fetch-anrop för att hämta specifik använtarinformation
 async function userApi() {
     try {
         const response = await fetch('https://dt207g-moment4.azurewebsites.net/api/protected/user', {
@@ -31,8 +30,7 @@ async function userApi() {
     }
 };
 
-
-//Delete fetch-anrop som tar in ett id/index som skickas med till servern för att tas bort från databasen 
+//Delete fetch-anrop som tar in ett id som skickas med till servern för att tas bort från databasen. Både användare och tillhörande inlägg tas bort. Sen tar token bort från lokalstorage.
 export async function userDelete(id) {
     let response = await fetch(`https://dt207g-moment4.azurewebsites.net/api/protected/user/delete`, {
         method: 'DELETE',
@@ -57,9 +55,6 @@ export async function userDelete(id) {
         });
 };
 
-
-
-
 //När sidan laddas 
 window.onload = writeUserToHtml();
 
@@ -67,20 +62,10 @@ window.onload = writeUserToHtml();
 async function writeUserToHtml() {
     // Anropa funktionen för att hämta data och väntar på svar
     let user = await userApi();
-     console.log(user);
-    //Om arrayen inte är tom byggs innehållet upp utifrån arrayen. 
-    
+
+    //innehållet om användaren bygg upp. 
         let newDiv = document.createElement("div");
         newDiv.classList.add(`cv-post`);
-        /*newDiv.innerHTML = `
-                    <h3>${user.username.charAt(0).toUpperCase()
-                        + user.username.slice(1)}</h3>
-                    <p><strong>Skapad:</strong> ${user.created.slice(0, 10)}</p>
-                    <p>Varning! Om du tar bort användaren försvinner alla dina skapade cv och går inte att återkalla.</p>
-                    <button id="remove" class="remove-user">Ta bort</button>
-                    `;
-        userDiv.appendChild(newDiv);*/
-
 
         let h3 = document.createElement("h3");
         let h3Text = document.createTextNode(user.username.charAt(0).toUpperCase()

@@ -23,11 +23,9 @@
 
 <body>
     <header>
-        <a href="index.html"><img src="cv.png" id="icon"></a>
+        <a href="index.html"><img src="cv.png" id="icon" alt="ikon av ett diplom"></a>
         <h1>Mina sidor</h1>
-        <a href="login.html" type="button" id="login-btn">Logga in</a>
-        <a href="index.html" type="button" id="logout-btn">Logga ut</a>
-        <button href="index.html" id="logout-btn">Logga ut</button>
+        <a href="index.html" id="logout-btn">Logga ut</a>
         <!--Centrerar kategorivalen-->
         <nav class="center2">
             <ul>
@@ -36,19 +34,18 @@
             </ul>
         </nav>
     </header>
-    <!--Huvudsidan med en todo-lista-->
+    <!--Sidan med användarinformation-->
     <main id="main">
         <div id="breadcrumbs"><a href="index.html">Startsidan</a> -> Mina sidor -> Min Användare<p></div>
         <!--Linje för stil-->
         <div class="line"></div>
-        <!--För att skriva ut todo som är aktiva-->
+        <!--Artikel där information om användaren skrivs ut-->
         <article>
             <h2>Min användare</h2>
             <p>Vänligen vänta, det kan ta en liten stund innan du ser cv-inläggen nedan.</p>
             <div id="user-div"></div>
             <!--Meddelande för när formuläret oven fyllts i-->
             <p id="alert"></p>
-            <p id="alert2"></p>
         </article>
     </main>
 </body>

@@ -27,6 +27,10 @@ h2 {
     text-align: center;
 }
 
+h2 {
+    margin-top: 40px;
+}
+
 /*Styling till rubriker i cv-inläggen*/
 h3 {
     text-decoration: underline;
@@ -45,24 +49,24 @@ nav a:visited {
 }
 
 /*nav hover*/
-nav a{
+nav a {
     text-decoration: none;
     color: white;
 }
 
 /*menu ul*/
-nav ul{
+nav ul {
     padding-left: 0;
 
     list-style-type: none;
 }
 
-nav li{
+nav li {
     display: inline-block;
 }
 
 a {
-    color: lightyellow;
+    color: rgb(105, 155, 255);
 }
 
 
@@ -70,14 +74,14 @@ a {
 .center1 {
     margin-left: auto;
     margin-right: auto;
-    width: 250px;
+    width: 245px;
     max-width: 100%;
 }
 
 .center2 {
     margin-left: auto;
     margin-right: auto;
-    width: 280px;
+    width: 275px;
     max-width: 100%;
 }
 
@@ -87,7 +91,9 @@ a {
 }
 
 /*Styling av knappar*/
-button, #login-btn, #logout-btn {
+button,
+#login-btn,
+#logout-btn {
     background-color: rgb(255, 255, 255);
     padding: 5px;
     border-radius: 10px;
@@ -100,17 +106,20 @@ button, #login-btn, #logout-btn {
     -webkit-text-fill-color: black;
     margin-top: 10px;
     display: block;
+    text-decoration: none;
 }
 
 /*Hover effekt till knappar*/
-button:hover, #login-btn:hover {
-    background-color: rgb(124, 197, 147);
+button:hover,
+#login-btn:hover {
+    background-color: rgb(105, 155, 255);
     box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
 }
 
 /*Styling av delete-knapp för cv-inlägg*/
-.remove-cv:hover, #logout-btn :hover {
-    background-color: rgb(207, 77, 77);
+.remove-cv:hover,
+#logout-btn:hover {
+    background-color: rgb(226, 82, 82);
     box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
 }
 
@@ -125,7 +134,8 @@ button:hover, #login-btn:hover {
     color: white;
 }
 
-#login-btn, #logout-btn {
+#login-btn,
+#logout-btn {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -146,7 +156,7 @@ button:hover, #login-btn:hover {
     height: 2px;
     width: 100%;
     background-color: white;
-    margin-top: 10px;
+    margin-top: -15px;
 }
 
 /*responsivt formulär*/
@@ -208,33 +218,19 @@ form {
     font-size: 0.8em;
     color: white;
     position: absolute;
-    left: 20px;    
+    left: 20px;
+    margin-top: 10px;
 }
 
 /*Media querie för extra små skärmar*/
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 470px) {
 
-    /*centreringsdiv till meny-knapparna*/
-    .center {
-        width: 250px;
-    }
-    
-    /*Meny-knappar*/
-    .btn {
-        padding: 5px;
-    }
+
+    #icon {
+        width: 50px;
     }
 
-    /*Media querie för extra små skärmar*/
-@media screen and (min-width: 300px) and (max-width: 355px) {
-
-    /*centreringsdiv till meny-knapparna*/
-    .center {
-        width: 280px;
-    }
-
-    /*Meny-knappar*/
-    .btn {
-        padding: 10px;
+    header {
+        padding-top: 50px;
     }
 }
