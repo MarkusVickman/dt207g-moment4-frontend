@@ -184,6 +184,10 @@ form {
     margin-right: auto;
 }
 
+#margin-cv {
+    margin-top: 30px;
+}
+
 /*styling av div till cv-inläggen*/
 .cv-post {
     background-color: rgb(145, 123, 68);
