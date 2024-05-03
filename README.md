@@ -24,8 +24,8 @@ På den här webbplatsen kan du lagra ditt CV i form av anställningar med Före
 
  
 ### Uppbyggnad
-*Webbplatsen skapades i ett node.js-projekt och använde parcel som atomatiserad utvecklingsmiljö.
-*Skriven i html, css och javaScript
+* Webbplatsen skapades i ett node.js-projekt och använde parcel som atomatiserad utvecklingsmiljö.
+* Skriven i html, css och javaScript
 
 Här går det att testköra webbplatsen [på denna länk](https://personligt-cv.netlify.app/). Koden innehåller många kommentarer som kan svara om fler frågor finns om webbplatsen. En mer ingående beskrivning av api-funktionerna och hur den används hittar du [här](https://github.com/MarkusVickman/dt207g-moment4).
 
